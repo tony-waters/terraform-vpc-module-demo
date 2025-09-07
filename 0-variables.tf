@@ -1,4 +1,10 @@
 
+variable "vpc_name" {
+  type = string
+  description = "VPC name"
+  default = "demo-vpc"
+}
+
 variable "azs" {
   type        = list(string)
   description = "Availability Zones"

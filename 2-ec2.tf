@@ -1,19 +1,19 @@
 
-# module "ec2_instance" {
-#   source  = "terraform-aws-modules/ec2-instance/aws"
-#
-#   name = "single-instance"
-#
-#   instance_type = var.ec2_instance_type
-#   key_name      = var.ec2_key_pair_name
-#   monitoring    = true
-#   # subnet_id     =
-#
-#   tags = {
-#     Terraform   = "true"
-#     Environment = "dev"
-#   }
-# }
+module "ec2_instance" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+
+  name = "single-instance"
+
+  instance_type = var.ec2_instance_type
+  key_name      = var.ec2_key_pair_name
+  monitoring    = true
+  # subnet_id     =
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
+}
 #
 # resource "aws_instance" "public_ec2" {
 #   ami = var.ec2_ami
